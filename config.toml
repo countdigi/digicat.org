@@ -15,3 +15,7 @@ pygmentsOptions = "linenos=table"
 
 [params]
   homeText = "You just made a Hugo blog from scratch."
+
+
+
+
