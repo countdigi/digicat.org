@@ -1,25 +1,26 @@
-<!doctype html>
-<html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    {{ $css := "css/site.css" | absURL }}
-    <link rel="stylesheet" href="{{ $css }}">
-    <title>{{ .Title }}</title>
-  </head>
-  <body>
-    <div class="container">
-      <main id="main">
-        <div id="home-jumbotron" class="jumbotron text-center">
-          <h1>{{ .Title }}</h1>
-          <p>{{ .Site.Params.homeText | markdownify }}</p>
-        </div>
+{{ define "main" }}
+
+<!--
+<ul>
+{{ range where .Site.RegularPages "Section" "post" }}
+  <li><a href="{{ .Permalink }}" />{{ .Title }}</a></li>
+{{ end }}
+</ul>
+-->
+
+<section id="home">
         <ul>
-        {{ range where .Site.RegularPages "Section" "post" }}
-          <li>{{ .Title }} {{ .Permalink }}</li>
-        {{ end }}
+          {{ range $index, $page := first 10 (where .Site.RegularPages "Section" "in" .Site.Params.mainSections) }}
+          <li {{if eq $index 0}}class="first"{{end}}>
+            <h1><a href="{{ .Permalink }}" title="{{ .Title }}">{{ .Title }}</a></h1>
+            <p>{{ .Summary }}</p>
+            {{ if .Truncated }}
+            <a href="{{ .RelPermalink }}">{{ T "readMore" }}</a>
+            {{ end }}
+          </li>
+          {{ end }}
         </ul>
-      </main>
-    </div>
-  </body>
-</html>
+      </section>
+
+
+{{ end}}

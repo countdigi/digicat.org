@@ -1,6 +1,30 @@
 body {
-  font-family: Optima, Candara, Calibri, Arial, sans-serif;
+  font-family: Ruda, sans-serif;
+  display: inline-block;
+  padding: 0.2em 0.3em;
+  font-size: 0.8em;
+  line-height: 1em;
+  color: #555555;
+  vertical-align: middle;
+  background-color: #fcfcfc;
+  border-width: 1px;
+  border-style: solid;
+  border-color: #cccccc #cccccc #bbbbbb;
+  border-image: none;
+  border-radius: 3px;
+  box-shadow: 0 -1px 0 #bbbbbb inset;
 }
+
+/*
+body {
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+  font-family: "Roboto Slab", serif;
+  color: #333333;
+}
+*/
+
 
 .topnav {
   list-style-type: none;

@@ -1,6 +1,6 @@
-baseURL = "http://example.org/"
+baseURL = "https://digicat.org/"
 languageCode = "en-us"
-title = "Hugo Blog"
+title = "digicat.org"
 
 disableKinds = ["taxonomyTerm"]
 
@@ -15,7 +15,3 @@ pygmentsOptions = "linenos=table"
 
 [params]
   homeText = "You just made a Hugo blog from scratch."
-
-
-
-
