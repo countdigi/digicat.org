@@ -2,7 +2,7 @@ baseURL = "https://digicat.org/"
 
 languageCode = "en-us"
 
-title = "digicat.org"
+title = "Digicat.org - Personal Blog of Kevin Counts"
 
 disableKinds = ["taxonomyTerm"]
 
@@ -13,7 +13,10 @@ pygmentsStyle = "colorful"
 pygmentsOptions = "linenos=table"
 
 [permalinks]
-  post = "/post/:slug/"
+  posts = "/:year/:month/:slug/"
+
+[params]
+authors = ["Kevin M. Counts"]
 
 [params.sns]
 github = "countdigi"
