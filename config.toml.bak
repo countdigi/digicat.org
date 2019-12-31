@@ -1,7 +1,5 @@
 baseURL = "https://digicat.org/"
-
 languageCode = "en-us"
-
 title = "digicat.org"
 
 disableKinds = ["taxonomyTerm"]
@@ -15,6 +13,5 @@ pygmentsOptions = "linenos=table"
 [permalinks]
   post = "/post/:slug/"
 
-[params.sns]
-github = "countdigi"
-twitter = "countdigi"
+[params]
+  homeText = "You just made a Hugo blog from scratch."

@@ -1,26 +1,15 @@
-<!doctype html>
-<html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    {{ $css := "css/site.css" | absURL }}
-
-    <link rel="stylesheet" type="text/css" href="{{ $css }}" />
-
-    <title>{{ .Title }}</title>
-  </head>
-  <body>
-    <div class="topnav">
-      <a href="digicat.org">digicat.org</a>
-      <a href="foo">foo</a>
-      <a href="bar">bar</a>
-      <a href="baz">baz</a>
-    </div>
-    <div class="container">
-      <main id="main">
+{{ partial "header.html" . }}
+<div class="row">
+  <div class="col-lg-9">
+    <article>
+      <div class="row">
         <h1>{{ .Title }}</h1>
-        {{ .Content }}
-      </main>
-    </div>
-  </body>
-</html>
+      </div>
+      {{ .Content }}
+    </article>
+  </div>
+  <div class="col-lg-3">
+    {{ partial "sidebar.html" . }}
+  </div>
+</div>
+{{ partial "footer.html" . }}
