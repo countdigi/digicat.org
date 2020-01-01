@@ -8,7 +8,7 @@ disableKinds = ["taxonomyTerm"]
 
 pygmentsCodeFences = true
 
-pygmentsStyle = "colorful"
+pygmentsStyle = "friendly"
 
 pygmentsOptions = "linenos=table"
 

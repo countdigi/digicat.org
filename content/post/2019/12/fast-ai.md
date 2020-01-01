@@ -1,7 +1,7 @@
 ---
 title: "Fast AI"
 date: 2019-12-31
-tags: ["DeepLearning"]
+tags: ["deep-learning"]
 draft: false
 ---
 
@@ -19,3 +19,7 @@ great learning resource.
 
 The course is available at <https://course.fast.ai/> and includes videos, jupyter notebooks, and
 instructions on how to use cloud resources to get up and running.
+
+Here is a preview of lesson one if you want to get a quick peek:
+
+{{< youtube XfoYk_Z5AkI >}}

@@ -1,10 +1,16 @@
 {{ partial "header.html" . }}
 <br/>
 <div class="row">
-  <div class="col-lg-9">
+  <div class="col-lg-12">
     <article>
       <h1>{{ .Title }}</h1>
-      <span style="color: grey">{{ .Lastmod.Format "2006-01-02" }} by Kevin Counts</span>
+      <span style="color: grey">By Kevin Counts on {{ .Lastmod.Format "2006-01-02" }}</span>
+      {{ with .Params.Tags }}
+        {{ range . }}
+        <a class="badge badge-pill badge-secondary" href="{{ "/tags/" | relLangURL }}{{ . | urlize }}/">{{ . }}</a>
+        {{ end }}
+      {{ end }}
+      <p/>
       {{ .Content }}
     </article>
   </div>

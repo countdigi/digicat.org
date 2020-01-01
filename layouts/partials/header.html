@@ -36,7 +36,7 @@
     <!-- /Open Graph -->
   </head>
   <body>
-    <header class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <header class="navbar navbar-expand-lg navbar-light bg-light">
       <ul class="navbar-nav">
         {{ with $.Site.Params.SNS.GitHub }}
         <li class="nav-item">
@@ -48,19 +48,9 @@
           <a class="nav-link" target="twitter_{{ . }}" href="https://twitter.com/@{{ . }}">Twitter<i class="ml-1 fab fa-twitter"></i></a>
         </li>
         {{ end }}
-        {{ with .Site.Params.SNS.Instagram }}
-        <li class="nav-item">
-          <a class="nav-link" target="instagram_{{ . }}" href="https://www.instagram.com/{{ . }}">Instagram<i class="ml-1 fab fa-instagram"></i></a>
-        </li>
-        {{ end }}
-        {{ with .Site.Params.SNS.Facebook }}
-        <li class="nav-item">
-          <a class="nav-link" target="facebook_{{ . }}" href="https://www.facebook.com/{{ . }}">Facebook<i class="ml-1 fab fa-facebook"></i></a>
-        </li>
-        {{ end }}
       </ul>
     </header>
-    <nav class="navbar sticky-top navbar-expand-lg navbar-light bg-light">
+    <nav class="navbar sticky-top navbar-expand-lg navbar-dark bg-primary">
       <a class="navbar-brand" href="{{ .Site.BaseURL }}">{{ .Site.Title }}</a>
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar_nav" aria-controls="navbar_nav" aria-expand="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
