@@ -10,6 +10,7 @@
     <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
     <link rel="stylesheet" href="{{ "common/site.css" | relURL }}">
     <!-- Open Graph: https://developers.facebook.com/docs/plugins/share-button -->
+
     {{ if .Page.IsHome }}
     <title>{{ .Site.Title }}</title>
     <meta property="og:title"       content="{{ .Site.Title }}" />
@@ -21,18 +22,19 @@
     {{ end }}
     <meta property="og:url"         content="{{ .Permalink }}" />
     <meta property="og:description" content="{{ .Description }}" />
-    {{ range $ext := ( slice "png" "jpg" "jpeg" ) }}
-    {{ $ogImagePath := ( delimit ( slice $.File.Dir $.File.TranslationBaseName "/og" $ext ) "" "." ) }}
-    {{ if ( fileExists ( print "static/" $ogImagePath ) ) }}
+
+    {{ $ogImagePath := "common/og.png" }}
+
     <meta property="og:image"       content="{{ $ogImagePath | absURL }}" />
     <meta property="twitter:image"  content="{{ $ogImagePath | absURL }}" />
     <meta property="twitter:image:src"  content="{{ $ogImagePath | absURL }}" />
-    {{ end }}
-    {{ end }}
+
     <meta name="twitter:card"       content="summary" />
+
     {{ with $.Site.Params.Twitter }}
     <meta name="twitter:site"       content="@{{ . }}" />
     {{ end }}
+
     <!-- /Open Graph -->
   </head>
   <body>

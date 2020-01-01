@@ -1,8 +1,8 @@
-baseURL = "https://digicat.org/"
+baseURL = "https://countdigi.github.io/"
 
 languageCode = "en-us"
 
-title = "Digicat.org - Personal Blog of Kevin Counts"
+title = "Kevin Counts"
 
 disableKinds = ["taxonomyTerm"]
 
@@ -17,6 +17,7 @@ pygmentsOptions = "linenos=table"
 
 [params]
 authors = ["Kevin M. Counts"]
+og_image = "images/countdigi-avatar.png"
 
 [params.sns]
 github = "countdigi"

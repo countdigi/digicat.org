@@ -7,7 +7,7 @@ serve:
 		--disableFastRender
 
 publish:
-	hugo --baseURL=https://digicat.org; \
+	hugo; \
 	cd public; \
 	git add .; \
 	git commit -m "Update"; \
