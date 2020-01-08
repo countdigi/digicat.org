@@ -32,3 +32,9 @@ table tbody td {
 table tbody tr:nth-child(even) td {
   background-color: #f0f0f0;
 }
+
+code {
+  background-color: #f0f0f0;
+  border-radius: 5px;
+  padding: 2px;
+}

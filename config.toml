@@ -4,7 +4,6 @@ languageCode = "en-us"
 
 title = "Kevin Counts"
 
-disableKinds = ["taxonomyTerm"]
 
 pygmentsCodeFences = true
 
@@ -22,3 +21,7 @@ og_image = "images/countdigi-avatar.png"
 [params.sns]
 github = "countdigi"
 twitter = "countdigi"
+
+#[taxonomies]
+#tag = "tags"
+# disableKinds = ["taxonomyTerm"]
