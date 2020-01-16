@@ -1,5 +1,6 @@
 ---
 title: "Fast AI"
+description: "Great podcast on Software Engineering Radio covering Fast.ai Deep Learning Project and Company"
 date: 2019-12-31
 tags: ["deep-learning"]
 draft: false
